@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ngao Beverages Ltd's sustainability commitment — local sourcing, eco packaging, and a low-carbon supply chain rooted in Kenya.">
+    <title>Sustainability | Ngao Beverages Ltd</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* ── Sustainability hero ── */
+        .sus-hero {
+            background: linear-gradient(135deg, #1a5c2a 60%, #2e7d44 100%);
+            color: #fff;
+            padding: 90px 0 70px;
+        }
+        .sus-hero h1 {
+            font-family: Georgia, serif;
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        .sus-hero p {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            max-width: 580px;
+        }
+        .accent-bar {
+            width: 60px;
+            height: 4px;
+            background: #f4c842;
+            border-radius: 2px;
+            margin: 16px 0 24px;
+        }
+
+        /* ── Three pillars ── */
+        .pillars-section {
+            padding: 70px 0;
+            background: #f9f9f9;
+        }
+        .pillars-section h2 {
+            font-family: Georgia, serif;
+            color: #1a5c2a;
+            font-size: 2rem;
+        }
+        .pillar-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 36px 28px;
+            height: 100%;
+            box-shadow: 0 2px 14px rgba(0,0,0,0.07);
+            border-top: 5px solid #1a5c2a;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .pillar-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 28px rgba(26,92,42,0.14);
+        }
+        .pillar-icon {
+            font-size: 2.8rem;
+            margin-bottom: 16px;
+        }
+        .pillar-card h4 {
+            font-family: Georgia, serif;
+            color: #1a5c2a;
+            margin-bottom: 12px;
+        }
+        .pillar-card p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* ── Goals progress ── */
+        .goals-section {
+            padding: 70px 0;
+            background: #fff;
+        }
+        .goals-section h2 {
+            font-family: Georgia, serif;
+            color: #1a5c2a;
+            font-size: 2rem;
+        }
+        .goal-item {
+            margin-bottom: 28px;
+        }
+        .goal-item .goal-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        .goal-item .goal-label span:first-child {
+            font-weight: 600;
+            color: #333;
+            font-size: 0.95rem;
+        }
+        .goal-item .goal-label span:last-child {
+            font-weight: 700;
+            color: #1a5c2a;
+            font-size: 0.95rem;
+        }
+        .progress {
+            height: 12px;
+            border-radius: 6px;
+            background: #e9ecef;
+        }
+        .progress-bar {
+            background: #1a5c2a;
+            border-radius: 6px;
+            transition: width 1.2s ease;
+        }
+        .progress-bar.yellow {
+            background: #f4c842;
+        }
+        .goal-note {
+            font-size: 0.82rem;
+            color: #888;
+            margin-top: 4px;
+        }
+
+        /* ── Farmer spotlight ── */
+        .farmer-section {
+            padding: 70px 0;
+            background: #1a5c2a;
+            color: #fff;
+        }
+        .farmer-section h2 {
+            font-family: Georgia, serif;
+            color: #f4c842;
+            font-size: 2rem;
+        }
+        .farmer-quote {
+            background: rgba(255,255,255,0.08);
+            border-left: 5px solid #f4c842;
+            border-radius: 8px;
+            padding: 36px 32px;
+            position: relative;
+        }
+        .farmer-quote::before {
+            content: '"';
+            font-family: Georgia, serif;
+            font-size: 6rem;
+            color: #f4c842;
+            opacity: 0.25;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            line-height: 1;
+        }
+        .farmer-quote p {
+            color: rgba(255,255,255,0.92);
+            font-size: 1.08rem;
+            line-height: 1.85;
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        .farmer-name {
+            color: #f4c842;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+        .farmer-detail {
+            color: rgba(255,255,255,0.65);
+            font-size: 0.88rem;
+        }
+        .farmer-stats {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 10px;
+            padding: 28px;
+            text-align: center;
+            height: 100%;
+        }
+        .farmer-stats h3 {
+            font-family: Georgia, serif;
+            font-size: 2.4rem;
+            color: #f4c842;
+            margin-bottom: 6px;
+        }
+        .farmer-stats p {
+            color: rgba(255,255,255,0.78);
+            font-size: 0.92rem;
+            margin: 0;
+        }
+
+        /* ── Eco packaging ── */
+        .packaging-section {
+            padding: 70px 0;
+            background: #f9f9f9;
+        }
+        .packaging-section h2 {
+            font-family: Georgia, serif;
+            color: #1a5c2a;
+            font-size: 2rem;
+        }
+        .packaging-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 28px 22px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            height: 100%;
+        }
+        .packaging-card .icon {
+            font-size: 2.4rem;
+            margin-bottom: 12px;
+        }
+        .packaging-card h5 {
+            font-family: Georgia, serif;
+            color: #1a5c2a;
+            margin-bottom: 8px;
+        }
+        .packaging-card p {
+            color: #666;
+            font-size: 0.92rem;
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        /* ── CTA ── */
+        .sus-cta {
+            padding: 70px 0;
+            background: #f4c842;
+            text-align: center;
+        }
+        .sus-cta h2 {
+            font-family: Georgia, serif;
+            color: #1a5c2a;
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+        .sus-cta p {
+            color: #333;
+            margin-bottom: 28px;
+            font-size: 1.02rem;
+        }
+        .btn-green {
+            background: #1a5c2a;
+            color: #fff;
+            padding: 12px 32px;
+            border-radius: 6px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.2s ease;
+            margin: 6px;
+        }
+        .btn-green:hover {
+            background: #14471f;
+            color: #fff;
+        }
+        .btn-green-outline {
+            background: transparent;
+            color: #1a5c2a;
+            border: 2px solid #1a5c2a;
+            padding: 12px 32px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.2s ease;
+            margin: 6px;
+        }
+        .btn-green-outline:hover {
+            background: #1a5c2a;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR: sticky top navigation with all page links -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="index.html">🛡️ Ngao Beverages</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="manufacturing.html">Manufacturing</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="sustainability.html">Sustainability</a></li>
+                    <li class="nav-item"><a class="nav-link" href="distributors.html">Distributors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO: sustainability page banner -->
+    <section class="sus-hero">
+        <div class="container">
+            <p class="text-uppercase fw-semibold" style="color:#f4c842; letter-spacing:1px; font-size:0.9rem;">Our Commitment</p>
+            <h1>Growing Green.<br>Staying Green.</h1>
+            <div class="accent-bar"></div>
+            <p>Sustainability at Ngao is not a marketing angle — it is how we operate. From the farms we source from to the bottles we use, every decision is made with the environment and our communities in mind.</p>
+        </div>
+    </section>
+
+    <!-- THREE PILLARS: local sourcing, eco packaging, carbon footprint -->
+    <section class="pillars-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Three Pillars of Our Sustainability Strategy</h2>
+                <div class="accent-bar mx-auto"></div>
+                <p style="color:#555; max-width:560px; margin:0 auto;">Everything we do sits on three foundations. Together they define what it means to be a responsible Kenyan beverage company.</p>
+            </div>
+            <!-- Pillar cards row -->
+            <div class="row g-4">
+                <!-- Pillar 1: Local Sourcing -->
+                <div class="col-md-4">
+                    <div class="pillar-card">
+                        <div class="pillar-icon">🌾</div>
+                        <h4>Local Sourcing</h4>
+                        <p>Every fruit in every Ngao bottle comes from a Kenyan farm. We partner directly with over 500 smallholder farmers across six counties — paying above-market rates at the farm gate and eliminating the middlemen who eat into farmer income. Buying local reduces food miles, keeps money in Kenyan communities, and means our fruit arrives fresher than anything imported could.</p>
+                    </div>
+                </div>
+                <!-- Pillar 2: Eco Packaging -->
+                <div class="col-md-4">
+                    <div class="pillar-card">
+                        <div class="pillar-icon">♻️</div>
+                        <h4>Eco Packaging</h4>
+                        <p>Since 2022, all Ngao bottles are made from 100% recyclable PET plastic. Our labels use water-based inks — no solvents, no heavy metals. We are currently piloting returnable glass bottles with select Nairobi retailers, with a full rollout planned for 2027. Our carton packaging uses FSC-certified paper from sustainably managed forests.</p>
+                    </div>
+                </div>
+                <!-- Pillar 3: Carbon Footprint -->
+                <div class="col-md-4">
+                    <div class="pillar-card">
+                        <div class="pillar-icon">🌍</div>
+                        <h4>Low-Carbon Operations</h4>
+                        <p>Our Ruiru facility runs on a 40kW solar array that covers 60% of our daytime energy needs. Our delivery fleet has been optimised for route efficiency — reducing total kilometres driven by 22% since 2023. We are working toward a fully electric last-mile delivery fleet in Nairobi by 2028, starting with two electric vans in Q3 2026.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GOALS: 2026 sustainability progress bars -->
+    <section class="goals-section">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5">
+                    <h2>2026 Sustainability Goals</h2>
+                    <div class="accent-bar"></div>
+                    <p style="color:#555; line-height:1.8;">We set public targets every year and report on them honestly — including the ones we miss. Here is where we stand at mid-2026 against the goals we set in January.</p>
+                    <p style="color:#555; line-height:1.8;">Progress is tracked quarterly by our sustainability working group, which includes two farmer representatives from our supply network.</p>
+                </div>
+                <!-- Progress bars column -->
+                <div class="col-lg-7">
+                    <!-- Goal 1 -->
+                    <div class="goal-item">
+                        <div class="goal-label">
+                            <span>100% recyclable packaging across all product lines</span>
+                            <span>100%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 100%"></div>
+                        </div>
+                        <div class="goal-note">✅ Achieved — all bottles switched to recyclable PET in 2022</div>
+                    </div>
+                    <!-- Goal 2 -->
+                    <div class="goal-item">
+                        <div class="goal-label">
+                            <span>Solar energy covering 80% of facility daytime needs</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar yellow" style="width: 60%"></div>
+                        </div>
+                        <div class="goal-note">⚡ In progress — additional 20kW panels ordered, installation Q4 2026</div>
+                    </div>
+                    <!-- Goal 3 -->
+                    <div class="goal-item">
+                        <div class="goal-label">
+                            <span>600 smallholder farmers in our sourcing network</span>
+                            <span>83%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 83%"></div>
+                        </div>
+                        <div class="goal-note">🌾 500 farmers currently — 100 more onboarding by December 2026</div>
+                    </div>
+                    <!-- Goal 4 -->
+                    <div class="goal-item">
+                        <div class="goal-label">
+                            <span>30% reduction in delivery fleet emissions vs 2023</span>
+                            <span>22%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar yellow" style="width: 73%"></div>
+                        </div>
+                        <div class="goal-note">🚛 Route optimisation complete — two electric vans arriving Q3 2026</div>
+                    </div>
+                    <!-- Goal 5 -->
+                    <div class="goal-item">
+                        <div class="goal-label">
+                            <span>Zero food waste from production floor</span>
+                            <span>78%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 78%"></div>
+                        </div>
+                        <div class="goal-note">🍃 Fruit pulp now sold to local composting partners — target 95% by year end</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FARMER SPOTLIGHT: real voice from our supply chain -->
+    <section class="farmer-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Voice From the Farm</h2>
+                <p style="color:rgba(255,255,255,0.8); max-width:520px; margin:0 auto;">Sustainability only means something if the people at the start of the supply chain feel it. Here is what one of our farmers has to say.</p>
+            </div>
+            <div class="row g-5 align-items-center">
+                <!-- Farmer quote -->
+                <div class="col-lg-7">
+                    <div class="farmer-quote">
+                        <p>Before Ngao came, I was selling my mangoes to brokers who would pay whatever they felt like on the day. Some seasons I lost more than I earned because the price dropped after I had already harvested. Now I know the price before I pick a single fruit. Ngao sends someone to my farm, we agree a rate, and they pay within three days of collection. I have been able to buy a water pump and expand my orchard from two acres to five. My children are in school. That is what a fair price does.</p>
+                        <div class="farmer-name">Samuel Mwenda</div>
+                        <div class="farmer-detail">Mango farmer, Kilifi County — Ngao supplier since 2017</div>
+                    </div>
+                </div>
+                <!-- Farmer stats -->
+                <div class="col-lg-5">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="farmer-stats">
+                                <h3>500+</h3>
+                                <p>Farmers in our network across 6 counties</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="farmer-stats">
+                                <h3>15%</h3>
+                                <p>Above market rate paid to every farmer</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="farmer-stats">
+                                <h3>3 days</h3>
+                                <p>Maximum payment turnaround after delivery</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="farmer-stats">
+                                <h3>6</h3>
+                                <p>Counties with active Ngao farm partnerships</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ECO PACKAGING: detail on our packaging choices -->
+    <section class="packaging-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>What's in Our Packaging</h2>
+                <div class="accent-bar mx-auto"></div>
+                <p style="color:#555; max-width:540px; margin:0 auto;">Every material choice we make is deliberate. Here is what goes into the packaging around every Ngao bottle.</p>
+            </div>
+            <!-- Packaging detail cards -->
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="packaging-card">
+                        <div class="icon">🧴</div>
+                        <h5>100% Recyclable PET</h5>
+                        <p>All bottles are made from food-grade PET plastic that is accepted by Nairobi's recycling infrastructure.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="packaging-card">
+                        <div class="icon">🖨️</div>
+                        <h5>Water-Based Inks</h5>
+                        <p>Labels are printed with water-based inks — no solvents, no heavy metals, and fully compatible with recycling.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="packaging-card">
+                        <div class="icon">📦</div>
+                        <h5>FSC-Certified Cartons</h5>
+                        <p>Outer cartons use paper from FSC-certified sources — meaning the forests they come from are responsibly managed.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="packaging-card">
+                        <div class="icon">🍶</div>
+                        <h5>Glass Pilot (2027)</h5>
+                        <p>We are trialling returnable glass bottles with select retailers. Full rollout planned once the return logistics are proven.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA: link to contact and about pages -->
+    <section class="sus-cta">
+        <div class="container">
+            <h2>Want to Partner With a Brand That Cares?</h2>
+            <p>Whether you are a retailer, distributor, or institution — if sustainability matters to your brand, it matters to ours too.</p>
+            <a href="contact.html" class="btn-green">Get in Touch</a>
+            <a href="about.html" class="btn-green-outline">Our Story</a>
+        </div>
+    </section>
+
+    <!-- FOOTER: site-wide footer with contact info -->
+    <footer class="py-4 text-white text-center" id="mainFooter">
+        <div class="container">
+            <p class="mb-1 fw-bold">Ngao Beverages Ltd 🛡️</p>
+            <p class="mb-1">Nairobi, Kenya | info@ngaobeverages.co.ke | +254 700 000 000</p>
+            <p class="mb-0">&copy; 2026 Ngao Beverages Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
