@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover how Ngao Beverages Ltd cold-presses Kenyan fruit from farm to bottle — our full manufacturing process explained.">
+    <title>Manufacturing | Ngao Beverages Ltd</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .mfg-hero {
+            background: linear-gradient(135deg, #1a5c2a 60%, #2e7d44 100%);
+            color: #fff;
+            padding: 90px 0 70px;
+        }
+        .mfg-hero h1 {
+            font-family: Georgia, serif;
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        .mfg-hero p {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            max-width: 580px;
+        }
+        .accent-bar {
+            width: 60px;
+            height: 4px;
+            background: #f4c842;
+            border-radius: 2px;
+            margin: 16px 0 24px;
+        }
+
+        /* Stats strip */
+        .stats-strip {
+            background: #f4c842;
+            padding: 40px 0;
+        }
+        .stat-item h3 {
+            font-family: Georgia, serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #1a5c2a;
+            margin-bottom: 4px;
+        }
+        .stat-item p {
+            color: #333;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* Process section */
+        .process-section {
+            padding: 70px 0;
+            background: #f9f9f9;
+        }
+        .process-section h2 {
+            font-family: Georgia, serif;
+            color: #1a5c2a;
+            font-size: 2rem;
+        }
+        .process-step {
+            background: #fff;
+            border-radius: 12px;
+            padding: 30px 24px;
+            height: 100%;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            position: relative;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .process-step:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(26,92,42,0.13);
+        }
+        .step-number {
+            width: 48px;
+            height: 48px;
+            background: #1a5c2a;
+            color: #f4c842;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Georgia, serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .step-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .process-step h5 {
+            font-family: Georgia, serif;
+            color: #1a5c2a;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        .process-step p {
+            color: #555;
+            font-size: 0.93rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+        .step-connector {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #1a5c2a;
+            padding-top: 60px;
+        }
+
+        /* Quality assurance */
+        .qa-section {
+            padding: 70px 0;
+            background: #fff;
+        }
+        .qa-section h2 {
+            font-family: Georgia, serif;
+            color: #1a5c2a;
+            font-size: 2rem;
+        }
+        .qa-callout {
+            background: #1a5c2a;
+            color: #fff;
+            border-radius: 12px;
+            padding: 40px;
+        }
+        .qa-callout h3 {
+            font-family: Georgia, serif;
+            color: #f4c842;
+            margin-bottom: 16px;
+        }
+        .qa-callout p {
+            color: rgba(255,255,255,0.88);
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+        .qa-check {
+            background: #f9f9f9;
+            border-left: 4px solid #f4c842;
+            border-radius: 6px;
+            padding: 20px 24px;
+            margin-bottom: 16px;
+        }
+        .qa-check h6 {
+            font-family: Georgia, serif;
+            color: #1a5c2a;
+            margin-bottom: 6px;
+            font-size: 1rem;
+        }
+        .qa-check p {
+            color: #555;
+            font-size: 0.92rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Facility section */
+        .facility-section {
+            padding: 70px 0;
+            background: #f9f9f9;
+        }
+        .facility-section h2 {
+            font-family: Georgia, serif;
+            color: #1a5c2a;
+            font-size: 2rem;
+        }
+        .facility-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 28px 22px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            height: 100%;
+        }
+        .facility-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+        .facility-card h5 {
+            font-family: Georgia, serif;
+            color: #1a5c2a;
+            margin-bottom: 8px;
+        }
+        .facility-card p {
+            color: #666;
+            font-size: 0.92rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* CTA */
+        .mfg-cta {
+            padding: 70px 0;
+            background: #1a5c2a;
+            text-align: center;
+            color: #fff;
+        }
+        .mfg-cta h2 {
+            font-family: Georgia, serif;
+            color: #f4c842;
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+        .mfg-cta p {
+            color: rgba(255,255,255,0.88);
+            margin-bottom: 28px;
+        }
+        .btn-yellow {
+            background: #f4c842;
+            color: #1a5c2a;
+            padding: 12px 32px;
+            border-radius: 6px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.2s ease;
+            margin: 6px;
+        }
+        .btn-yellow:hover {
+            background: #e0b430;
+            color: #1a5c2a;
+        }
+        .btn-white-outline {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+            padding: 12px 32px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.2s ease;
+            margin: 6px;
+        }
+        .btn-white-outline:hover {
+            background: #fff;
+            color: #1a5c2a;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="index.html">🛡️ Ngao Beverages</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="manufacturing.html">Manufacturing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sustainability.html">Sustainability</a></li>
+                    <li class="nav-item"><a class="nav-link" href="distributors.html">Distributors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="mfg-hero">
+        <div class="container">
+            <p class="text-uppercase fw-semibold" style="color:#f4c842; letter-spacing:1px; font-size:0.9rem;">How We Do It</p>
+            <h1>From Farm to Bottle.<br>Nothing Hidden.</h1>
+            <div class="accent-bar"></div>
+            <p>Every bottle of Ngao juice follows a strict six-step process — from sourcing at the farm gate to cold-pressing and bottling in our Ruiru facility. No shortcuts. No compromises.</p>
+        </div>
+    </section>
+
+    <!-- STATS STRIP -->
+    <div class="stats-strip">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-6 col-md-3 stat-item">
+                    <h3>24hrs</h3>
+                    <p>Farm to bottle turnaround</p>
+                </div>
+                <div class="col-6 col-md-3 stat-item">
+                    <h3>0°C</h3>
+                    <p>Heat used in pressing</p>
+                </div>
+                <div class="col-6 col-md-3 stat-item">
+                    <h3>500+</h3>
+                    <p>Farmers in our network</p>
+                </div>
+                <div class="col-6 col-md-3 stat-item">
+                    <h3>35%</h3>
+                    <p>More yield per fruit vs centrifugal</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROCESS SECTION -->
+    <section class="process-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>The Six-Step Cold-Press Process</h2>
+                <div class="accent-bar mx-auto"></div>
+                <p style="color:#555; max-width:560px; margin:0 auto;">Every step is deliberate. Every decision is about keeping the fruit as close to its natural state as possible.</p>
+            </div>
+            <div class="row g-4">
+                <!-- Step 1 -->
+                <div class="col-md-4">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-icon">🌾</div>
+                        <h5>Sourcing</h5>
+                        <p>We source directly from over 500 smallholder farmers across Kilifi, Kwale, Murang'a, and Nyeri. Each farm is visited and vetted by our sourcing team. We pay above-market rates at the farm gate — no middlemen, no delays.</p>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="col-md-4">
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-icon">🚛</div>
+                        <h5>Transport & Intake</h5>
+                        <p>Harvested fruit is transported to our Ruiru facility in refrigerated vehicles within hours of picking. On arrival, every batch is weighed, logged, and inspected by our quality team before it enters the production floor.</p>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="col-md-4">
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-icon">🚿</div>
+                        <h5>Washing & Sorting</h5>
+                        <p>Fruit goes through a three-stage wash using food-grade water — a rinse, a sanitising bath, and a clean water final wash. Damaged or substandard fruit is sorted out by hand at this stage. Only the best moves forward.</p>
+                    </div>
+                </div>
+                <!-- Step 4 -->
+                <div class="col-md-4">
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-icon">⚙️</div>
+                        <h5>Cold-Pressing</h5>
+                        <p>Fruit is loaded into our hydraulic cold-press machines, which apply thousands of pounds of pressure to extract juice — with zero heat. This preserves the vitamins, enzymes, and natural flavour that heat pasteurisation destroys.</p>
+                    </div>
+                </div>
+                <!-- Step 5 -->
+                <div class="col-md-4">
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <div class="step-icon">🔬</div>
+                        <h5>Quality Testing</h5>
+                        <p>Every batch is tested in our on-site lab before bottling. We check pH levels, Brix (sugar content), microbial counts, and colour consistency. Batches that don't meet our standards are rejected — no exceptions.</p>
+                    </div>
+                </div>
+                <!-- Step 6 -->
+                <div class="col-md-4">
+                    <div class="process-step">
+                        <div class="step-number">6</div>
+                        <div class="step-icon">🍾</div>
+                        <h5>Bottling & Distribution</h5>
+                        <p>Approved juice is bottled in our clean-room facility into 250ml, 500ml, and 1L recyclable PET bottles. Bottles are sealed, labelled, and moved to refrigerated storage within the same day — ready for dispatch to retailers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUALITY ASSURANCE -->
+    <section class="qa-section">
+        <div class="container">
+            <div class="row g-5 align-items-start">
+                <div class="col-lg-5">
+                    <h2>Quality Assurance</h2>
+                    <div class="accent-bar"></div>
+                    <p style="color:#555; line-height:1.8;">Quality at Ngao is not a department — it is a mindset that runs through every person on the production floor. Our Head of Production, Amina Odhiambo, built our QA framework from scratch using international food safety standards adapted for the Kenyan context.</p>
+                    <div class="qa-callout mt-4">
+                        <h3>🏅 Our Standards</h3>
+                        <p>All Ngao products are produced in compliance with Kenya Bureau of Standards (KEBS) guidelines for fruit juice. Our facility is inspected annually and holds a valid food manufacturing licence from the Kenya Food and Drug Authority.</p>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="qa-check">
+                        <h6>🧪 Batch pH & Brix Testing</h6>
+                        <p>Every batch is tested for acidity and natural sugar levels before bottling. This ensures flavour consistency across every bottle of the same product.</p>
+                    </div>
+                    <div class="qa-check">
+                        <h6>🦠 Microbial Count Checks</h6>
+                        <p>We test for total plate count, yeast, and mould in every batch. Any batch exceeding our safety thresholds is discarded — it never reaches a shelf.</p>
+                    </div>
+                    <div class="qa-check">
+                        <h6>🎨 Colour & Clarity Grading</h6>
+                        <p>Juice colour and clarity are visually graded against our internal standards. Cold-pressed juice should look natural — not artificially bright or cloudy.</p>
+                    </div>
+                    <div class="qa-check">
+                        <h6>📦 Seal & Label Integrity</h6>
+                        <p>Every sealed bottle is checked for cap integrity and label accuracy before it leaves the facility. Mislabelled or improperly sealed bottles are pulled from the line.</p>
+                    </div>
+                    <div class="qa-check">
+                        <h6>❄️ Cold Chain Verification</h6>
+                        <p>Temperature logs are maintained from production through to delivery. Our distribution vehicles are equipped with real-time temperature monitoring.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FACILITY -->
+    <section class="facility-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Our Ruiru Facility</h2>
+                <div class="accent-bar mx-auto"></div>
+                <p style="color:#555; max-width:560px; margin:0 auto;">Built for cold-press production from the ground up — with food safety, efficiency, and worker welfare as core design principles.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="facility-card">
+                        <div class="icon">🏭</div>
+                        <h5>Production Floor</h5>
+                        <p>2,400 sq ft climate-controlled production floor with dedicated zones for washing, pressing, and bottling.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="facility-card">
+                        <div class="icon">🔬</div>
+                        <h5>On-Site Lab</h5>
+                        <p>Fully equipped quality testing lab staffed by two food scientists who run tests on every production batch.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="facility-card">
+                        <div class="icon">❄️</div>
+                        <h5>Cold Storage</h5>
+                        <p>800 sq ft refrigerated storage maintained at 2–4°C, with capacity for 15,000 bottles at any one time.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="facility-card">
+                        <div class="icon">🚛</div>
+                        <h5>Dispatch Bay</h5>
+                        <p>Dedicated loading bay for our refrigerated delivery fleet — serving Nairobi same-day, upcountry within 48 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="mfg-cta">
+        <div class="container">
+            <h2>Want to See It Yourself?</h2>
+            <p>We welcome visits from retailers, distributors, and institutional partners. Contact us to arrange a facility tour.</p>
+            <a href="contact.html" class="btn-yellow">Book a Visit</a>
+            <a href="products.html" class="btn-white-outline">See Our Products</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-4 text-white text-center" id="mainFooter">
+        <div class="container">
+            <p class="mb-1 fw-bold">Ngao Beverages Ltd 🛡️</p>
+            <p class="mb-1">Nairobi, Kenya | info@ngaobeverages.co.ke | +254 700 000 000</p>
+            <p class="mb-0">&copy; 2026 Ngao Beverages Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
