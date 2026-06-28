@@ -7,274 +7,14 @@
     <title>Sustainability | Ngao Beverages Ltd</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        /* ── Sustainability hero ── */
-        .sus-hero {
-            background: linear-gradient(135deg, #1a5c2a 60%, #2e7d44 100%);
-            color: #fff;
-            padding: 90px 0 70px;
-        }
-        .sus-hero h1 {
-            font-family: Georgia, serif;
-            font-size: 3rem;
-            font-weight: 700;
-        }
-        .sus-hero p {
-            font-size: 1.15rem;
-            opacity: 0.9;
-            max-width: 580px;
-        }
-        .accent-bar {
-            width: 60px;
-            height: 4px;
-            background: #f4c842;
-            border-radius: 2px;
-            margin: 16px 0 24px;
-        }
-
-        /* ── Three pillars ── */
-        .pillars-section {
-            padding: 70px 0;
-            background: #f9f9f9;
-        }
-        .pillars-section h2 {
-            font-family: Georgia, serif;
-            color: #1a5c2a;
-            font-size: 2rem;
-        }
-        .pillar-card {
-            background: #fff;
-            border-radius: 12px;
-            padding: 36px 28px;
-            height: 100%;
-            box-shadow: 0 2px 14px rgba(0,0,0,0.07);
-            border-top: 5px solid #1a5c2a;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .pillar-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 28px rgba(26,92,42,0.14);
-        }
-        .pillar-icon {
-            font-size: 2.8rem;
-            margin-bottom: 16px;
-        }
-        .pillar-card h4 {
-            font-family: Georgia, serif;
-            color: #1a5c2a;
-            margin-bottom: 12px;
-        }
-        .pillar-card p {
-            color: #555;
-            line-height: 1.8;
-            font-size: 0.95rem;
-            margin: 0;
-        }
-
-        /* ── Goals progress ── */
-        .goals-section {
-            padding: 70px 0;
-            background: #fff;
-        }
-        .goals-section h2 {
-            font-family: Georgia, serif;
-            color: #1a5c2a;
-            font-size: 2rem;
-        }
-        .goal-item {
-            margin-bottom: 28px;
-        }
-        .goal-item .goal-label {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px;
-        }
-        .goal-item .goal-label span:first-child {
-            font-weight: 600;
-            color: #333;
-            font-size: 0.95rem;
-        }
-        .goal-item .goal-label span:last-child {
-            font-weight: 700;
-            color: #1a5c2a;
-            font-size: 0.95rem;
-        }
-        .progress {
-            height: 12px;
-            border-radius: 6px;
-            background: #e9ecef;
-        }
-        .progress-bar {
-            background: #1a5c2a;
-            border-radius: 6px;
-            transition: width 1.2s ease;
-        }
-        .progress-bar.yellow {
-            background: #f4c842;
-        }
-        .goal-note {
-            font-size: 0.82rem;
-            color: #888;
-            margin-top: 4px;
-        }
-
-        /* ── Farmer spotlight ── */
-        .farmer-section {
-            padding: 70px 0;
-            background: #1a5c2a;
-            color: #fff;
-        }
-        .farmer-section h2 {
-            font-family: Georgia, serif;
-            color: #f4c842;
-            font-size: 2rem;
-        }
-        .farmer-quote {
-            background: rgba(255,255,255,0.08);
-            border-left: 5px solid #f4c842;
-            border-radius: 8px;
-            padding: 36px 32px;
-            position: relative;
-        }
-        .farmer-quote::before {
-            content: '"';
-            font-family: Georgia, serif;
-            font-size: 6rem;
-            color: #f4c842;
-            opacity: 0.25;
-            position: absolute;
-            top: -10px;
-            left: 20px;
-            line-height: 1;
-        }
-        .farmer-quote p {
-            color: rgba(255,255,255,0.92);
-            font-size: 1.08rem;
-            line-height: 1.85;
-            font-style: italic;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-        }
-        .farmer-name {
-            color: #f4c842;
-            font-weight: 700;
-            font-size: 0.95rem;
-        }
-        .farmer-detail {
-            color: rgba(255,255,255,0.65);
-            font-size: 0.88rem;
-        }
-        .farmer-stats {
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.15);
-            border-radius: 10px;
-            padding: 28px;
-            text-align: center;
-            height: 100%;
-        }
-        .farmer-stats h3 {
-            font-family: Georgia, serif;
-            font-size: 2.4rem;
-            color: #f4c842;
-            margin-bottom: 6px;
-        }
-        .farmer-stats p {
-            color: rgba(255,255,255,0.78);
-            font-size: 0.92rem;
-            margin: 0;
-        }
-
-        /* ── Eco packaging ── */
-        .packaging-section {
-            padding: 70px 0;
-            background: #f9f9f9;
-        }
-        .packaging-section h2 {
-            font-family: Georgia, serif;
-            color: #1a5c2a;
-            font-size: 2rem;
-        }
-        .packaging-card {
-            background: #fff;
-            border-radius: 10px;
-            padding: 28px 22px;
-            text-align: center;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-            height: 100%;
-        }
-        .packaging-card .icon {
-            font-size: 2.4rem;
-            margin-bottom: 12px;
-        }
-        .packaging-card h5 {
-            font-family: Georgia, serif;
-            color: #1a5c2a;
-            margin-bottom: 8px;
-        }
-        .packaging-card p {
-            color: #666;
-            font-size: 0.92rem;
-            line-height: 1.65;
-            margin: 0;
-        }
-
-        /* ── CTA ── */
-        .sus-cta {
-            padding: 70px 0;
-            background: #f4c842;
-            text-align: center;
-        }
-        .sus-cta h2 {
-            font-family: Georgia, serif;
-            color: #1a5c2a;
-            font-size: 2rem;
-            margin-bottom: 12px;
-        }
-        .sus-cta p {
-            color: #333;
-            margin-bottom: 28px;
-            font-size: 1.02rem;
-        }
-        .btn-green {
-            background: #1a5c2a;
-            color: #fff;
-            padding: 12px 32px;
-            border-radius: 6px;
-            font-weight: 700;
-            text-decoration: none;
-            display: inline-block;
-            transition: background 0.2s ease;
-            margin: 6px;
-        }
-        .btn-green:hover {
-            background: #14471f;
-            color: #fff;
-        }
-        .btn-green-outline {
-            background: transparent;
-            color: #1a5c2a;
-            border: 2px solid #1a5c2a;
-            padding: 12px 32px;
-            border-radius: 6px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.2s ease;
-            margin: 6px;
-        }
-        .btn-green-outline:hover {
-            background: #1a5c2a;
-            color: #fff;
-        }
-    </style>
+    
 </head>
 <body>
 
     <!-- NAVBAR: sticky top navigation with all page links -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand fw-bold fs-4" href="index.html">🛡️ Ngao Beverages</a>
+            <a class="navbar-brand fw-bold fs-4" href="index.html"> Ngao Beverages</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -519,7 +259,7 @@
     <footer class="py-4 text-white text-center" id="mainFooter">
         <div class="container">
             <p class="mb-1 fw-bold">Ngao Beverages Ltd 🛡️</p>
-            <p class="mb-1">Nairobi, Kenya | info@ngaobeverages.co.ke | +254 700 000 000</p>
+            <p class="mb-1">Nairobi, Kenya |  ngaobeverages@gmail.com | +254 700 000 000</p>
             <p class="mb-0">&copy; 2026 Ngao Beverages Ltd. All rights reserved.</p>
         </div>
     </footer>
@@ -528,6 +268,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
