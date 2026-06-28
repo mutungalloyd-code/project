@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Ngao Beverages Ltd — get in touch for orders, distributor enquiries, or to book a factory visit.">
+    <title>Contact Us | Ngao Beverages Ltd</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* ── Contact hero ── */
+        .contact-hero {
+            background: linear-gradient(135deg, #1a5c2a 60%, #2e7d44 100%);
+            color: #fff;
+            padding: 90px 0 70px;
+        }
+        .contact-hero h1 {
+            font-family: Georgia, serif;
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        .contact-hero p {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            max-width: 580px;
+        }
+        .accent-bar {
+            width: 60px;
+            height: 4px;
+            background: #f4c842;
+            border-radius: 2px;
+            margin: 16px 0 24px;
+        }
+
+        /* ── Contact section ── */
+        .contact-section {
+            padding: 70px 0;
+            background: #f9f9f9;
+        }
+        .contact-section h2 {
+            font-family: Georgia, serif;
+            color: #1a5c2a;
+            font-size: 2rem;
+        }
+
+        /* ── Form styles ── */
+        .contact-form-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 2px 14px rgba(0,0,0,0.07);
+        }
+        .form-label {
+            font-weight: 600;
+            color: #333;
+            font-size: 0.92rem;
+            margin-bottom: 6px;
+        }
+        .form-control, .form-select {
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 10px 14px;
+            font-size: 0.95rem;
+            transition: border-color 0.2s ease;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: #1a5c2a;
+            box-shadow: 0 0 0 3px rgba(26,92,42,0.1);
+            outline: none;
+        }
+        .form-control.is-invalid, .form-select.is-invalid {
+            border-color: #dc3545;
+        }
+        .form-control.is-valid, .form-select.is-valid {
+            border-color: #1a5c2a;
+        }
+        .invalid-feedback {
+            font-size: 0.82rem;
+            color: #dc3545;
+        }
+        .btn-submit {
+            background: #1a5c2a;
+            color: #fff;
+            border: none;
+            padding: 12px 36px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            width: 100%;
+        }
+        .btn-submit:hover { background: #14471f; }
+
+        /* ── Success alert ── */
+        .alert-success-ngao {
+            background: #d4edda;
+            border: 1px solid #1a5c2a;
+            border-radius: 8px;
+            padding: 18px 24px;
+            color: #1a5c2a;
+            font-weight: 600;
+            display: none;
+            margin-bottom: 20px;
+        }
+
+        /* ── Info card ── */
+        .info-card {
+            background: #1a5c2a;
+            border-radius: 12px;
+            padding: 36px 28px;
+            color: #fff;
+            height: 100%;
+        }
+        .info-card h3 {
+            font-family: Georgia, serif;
+            color: #f4c842;
+            margin-bottom: 24px;
+            font-size: 1.5rem;
+        }
+        .info-item {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 22px;
+            align-items: flex-start;
+        }
+        .info-icon {
+            font-size: 1.4rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .info-item h6 {
+            color: #f4c842;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        .info-item p {
+            color: rgba(255,255,255,0.85);
+            font-size: 0.92rem;
+            margin: 0;
+            line-height: 1.6;
+        }
+        .info-divider {
+            border-color: rgba(255,255,255,0.15);
+            margin: 24px 0;
+        }
+        .hours-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.88rem;
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.8);
+        }
+        .hours-row:last-child { border-bottom: none; }
+        .hours-row span:last-child { color: #f4c842; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR: sticky top navigation with all page links -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="index.html">🛡️ Ngao Beverages</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="manufacturing.html">Manufacturing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sustainability.html">Sustainability</a></li>
+                    <li class="nav-item"><a class="nav-link" href="distributors.html">Distributors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO: contact page banner -->
+    <section class="contact-hero">
+        <div class="container">
+            <p class="text-uppercase fw-semibold" style="color:#f4c842; letter-spacing:1px; font-size:0.9rem;">Get In Touch</p>
+            <h1>We'd Love<br>to Hear From You.</h1>
+            <div class="accent-bar"></div>
+            <p>Whether you are a retailer, distributor, farmer, or just a fan of good juice — our team is here and we respond within 24 hours.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM AND INFO -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="row g-5">
+
+                <!-- Contact form column -->
+                <div class="col-lg-7">
+                    <h2 class="mb-4">Send Us a Message</h2>
+
+                    <!-- Success alert shown after valid submission -->
+                    <div class="alert-success-ngao" id="successAlert">
+                        ✅ Message sent! We'll get back to you within 24 hours.
+                    </div>
+
+                    <div class="contact-form-card">
+                        <!-- Full name field -->
+                        <div class="mb-4">
+                            <label class="form-label" for="fullName">Full Name *</label>
+                            <input type="text" class="form-control" id="fullName" placeholder="e.g. Jane Wanjiku">
+                            <div class="invalid-feedback" id="nameError">Please enter your full name.</div>
+                        </div>
+
+                        <!-- Email field -->
+                        <div class="mb-4">
+                            <label class="form-label" for="email">Email Address *</label>
+                            <input type="email" class="form-control" id="email" placeholder="e.g. jane@example.com">
+                            <div class="invalid-feedback" id="emailError">Please enter a valid email address.</div>
+                        </div>
+
+                        <!-- Phone field -->
+                        <div class="mb-4">
+                            <label class="form-label" for="phone">Phone Number (Optional)</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="e.g. +254 700 000 000">
+                        </div>
+
+                        <!-- Subject dropdown -->
+                        <div class="mb-4">
+                            <label class="form-label" for="subject">Subject *</label>
+                            <select class="form-select" id="subject">
+                                <option value="">— Select a subject —</option>
+                                <option value="general">General Enquiry</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="distributor">Distributor Application</option>
+                                <option value="order">Place an Order</option>
+                                <option value="visit">Book a Factory Visit</option>
+                                <option value="complaint">Complaint or Feedback</option>
+                            </select>
+                            <div class="invalid-feedback" id="subjectError">Please select a subject.</div>
+                        </div>
+
+                        <!-- Message field -->
+                        <div class="mb-4">
+                            <label class="form-label" for="message">Message *</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Tell us what's on your mind..."></textarea>
+                            <div class="invalid-feedback" id="messageError">Please enter a message (at least 20 characters).</div>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button class="btn-submit" id="submitBtn" type="button">Send Message</button>
+                    </div>
+                </div>
+
+                <!-- Company info column -->
+                <div class="col-lg-5">
+                    <div class="info-card">
+                        <h3>Contact Information</h3>
+
+                        <!-- Address info item -->
+                        <div class="info-item">
+                            <div class="info-icon">📍</div>
+                            <div>
+                                <h6>Address</h6>
+                                <p>Ngao Beverages Ltd<br>Industrial Area, Ruiru<br>Kiambu County, Kenya</p>
+                            </div>
+                        </div>
+
+                        <!-- Phone info item -->
+                        <div class="info-item">
+                            <div class="info-icon">📞</div>
+                            <div>
+                                <h6>Phone</h6>
+                                <p>+254 700 000 000<br><small style="opacity:0.7;">Mon–Fri, 8am–5pm EAT</small></p>
+                            </div>
+                        </div>
+
+                        <!-- Email info item -->
+                        <div class="info-item">
+                            <div class="info-icon">✉️</div>
+                            <div>
+                                <h6>Email</h6>
+                                <p>info@ngaobeverages.co.ke<br><small style="opacity:0.7;">We respond within 24 hours</small></p>
+                            </div>
+                        </div>
+
+                        <!-- Social media info item -->
+                        <div class="info-item">
+                            <div class="info-icon">📱</div>
+                            <div>
+                                <h6>Social Media</h6>
+                                <p>@NgaoBeverages on Instagram, Facebook & X (Twitter)</p>
+                            </div>
+                        </div>
+
+                        <hr class="info-divider">
+
+                        <!-- Office hours -->
+                        <h6 style="color:#f4c842; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:12px;">Office Hours</h6>
+                        <div class="hours-row"><span>Monday – Friday</span><span>8:00am – 5:00pm</span></div>
+                        <div class="hours-row"><span>Saturday</span><span>9:00am – 1:00pm</span></div>
+                        <div class="hours-row"><span>Sunday & Public Holidays</span><span>Closed</span></div>
+
+                        <hr class="info-divider">
+
+                        <!-- Response time note -->
+                        <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; margin:0;">
+                            💬 All enquiries received before 3pm EAT on a working day receive a same-day acknowledgement.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER: site-wide footer with contact info -->
+    <footer class="py-4 text-white text-center" id="mainFooter">
+        <div class="container">
+            <p class="mb-1 fw-bold">Ngao Beverages Ltd 🛡️</p>
+            <p class="mb-1">Nairobi, Kenya | info@ngaobeverages.co.ke | +254 700 000 000</p>
+            <p class="mb-0">&copy; 2026 Ngao Beverages Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- JS Feature #2: Contact form validation -->
+    <script>
+        const submitBtn = document.getElementById('submitBtn');
+        const successAlert = document.getElementById('successAlert');
+
+        // Validate email format using regex
+        function isValidEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        // Clear validation state from a field
+        function clearValidation(field) {
+            field.classList.remove('is-invalid', 'is-valid');
+        }
+
+        // Mark field as invalid and show error
+        function setInvalid(field, errorId) {
+            field.classList.add('is-invalid');
+            field.classList.remove('is-valid');
+            document.getElementById(errorId).style.display = 'block';
+        }
+
+        // Mark field as valid and hide error
+        function setValid(field, errorId) {
+            field.classList.add('is-valid');
+            field.classList.remove('is-invalid');
+            document.getElementById(errorId).style.display = 'none';
+        }
+
+        // Main form validation on submit
+        submitBtn.addEventListener('click', function () {
+            const name = document.getElementById('fullName');
+            const email = document.getElementById('email');
+            const subject = document.getElementById('subject');
+            const message = document.getElementById('message');
+            let valid = true;
+
+            // Validate name field
+            if (name.value.trim().length < 3) {
+                setInvalid(name, 'nameError');
+                valid = false;
+            } else {
+                setValid(name, 'nameError');
+            }
+
+            // Validate email field
+            if (!isValidEmail(email.value.trim())) {
+                setInvalid(email, 'emailError');
+                valid = false;
+            } else {
+                setValid(email, 'emailError');
+            }
+
+            // Validate subject dropdown
+            if (subject.value === '') {
+                setInvalid(subject, 'subjectError');
+                valid = false;
+            } else {
+                setValid(subject, 'subjectError');
+            }
+
+            // Validate message length
+            if (message.value.trim().length < 20) {
+                setInvalid(message, 'messageError');
+                valid = false;
+            } else {
+                setValid(message, 'messageError');
+            }
+
+            // If all valid show success alert and reset form
+            if (valid) {
+                successAlert.style.display = 'block';
+                name.value = '';
+                email.value = '';
+                document.getElementById('phone').value = '';
+                subject.value = '';
+                message.value = '';
+                [name, email, subject, message].forEach(f => clearValidation(f));
+                successAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        });
+
+        // Live validation on input for better UX
+        document.getElementById('fullName').addEventListener('input', function () {
+            if (this.value.trim().length >= 3) setValid(this, 'nameError');
+        });
+        document.getElementById('email').addEventListener('input', function () {
+            if (isValidEmail(this.value.trim())) setValid(this, 'emailError');
+        });
+        document.getElementById('subject').addEventListener('change', function () {
+            if (this.value !== '') setValid(this, 'subjectError');
+        });
+        document.getElementById('message').addEventListener('input', function () {
+            if (this.value.trim().length >= 20) setValid(this, 'messageError');
+        });
+    </script>
+</body>
+</html>
