@@ -11,7 +11,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand fw-bold fs-4" href="index.html">🛡️ Ngao Beverages</a>
+            <a class="navbar-brand fw-bold fs-4" href="index.html"> Ngao Beverages</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -122,19 +122,29 @@
             <div class="row justify-content-center mt-4">
                 <div class="col-md-6">
                     <div class="card shadow-sm p-4">
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Your Name">
+
+                        <!-- Success alert shown after valid submission -->
+                        <div id="distSuccessAlert" style="display:none; background:#d4edda; border:1px solid #1a5c2a; border-radius:8px; padding:16px 20px; color:#1a5c2a; font-weight:600; margin-bottom:16px;">
+                            ✅ Thank you! Our sales team will contact you within 48 hours.
                         </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Business Name">
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="County / Region">
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Phone Number">
-                        </div>
-                        <button class="btn btn-success w-100">Submit Interest</button>
+
+                        <!-- Distributor application form -->
+                        <form id="distributorForm">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Your Name">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Business Name">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="County / Region">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Phone Number">
+                            </div>
+                            <button type="button" id="distSubmitBtn" class="btn btn-success w-100">Submit Interest</button>
+                        </form>
+
                     </div>
                 </div>
             </div>
@@ -144,7 +154,7 @@
     <footer class="py-4 text-white text-center" id="mainFooter">
         <div class="container">
             <p class="mb-1 fw-bold">Ngao Beverages Ltd 🛡️</p>
-            <p class="mb-1">Nairobi, Kenya | info@ngaobeverages.co.ke | +254 700 000 000</p>
+            <p class="mb-1">Nairobi, Kenya | ngaobeverages@gmail.com | +254 700 000 000</p>
             <p class="mb-0">&copy; 2026 Ngao Beverages Ltd. All rights reserved.</p>
         </div>
     </footer>
